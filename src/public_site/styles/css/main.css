@@ -1,0 +1,477 @@
+/*
+  This is the main file of SCSS which bootstraps the other SCSS files.
+*/
+/*
+  This file includes all the variables for the SCSS files, by saving values
+  to variables we can avoid repetition and make it efficient to make changes
+  to the values.
+*/
+@font-face {
+  font-family: lexend;
+  src: url(/src/public_site/font/Lexend-Regular.ttf); }
+
+@font-face {
+  font-family: nunito;
+  src: url(/src/public_site/font/Nunito-Regular.ttf); }
+
+@font-face {
+  font-family: bungee;
+  src: url(/src/public_site/font/Bungee-Regular.ttf); }
+
+header {
+  position: absolute;
+  height: 115px;
+  width: 100%; }
+  header .col {
+    display: flex;
+    padding: 20px 130px 20px 130px; }
+    header .col .row {
+      width: 50%; }
+      header .col .row img {
+        height: 68px; }
+      header .col .row nav {
+        padding: 20px;
+        background-color: #0072C6;
+        width: fit-content;
+        margin-left: auto; }
+        header .col .row nav a {
+          color: #FFF;
+          text-decoration: none;
+          font-size: 20px;
+          margin: auto 20px auto 20px;
+          height: 28px;
+          width: fit-content; }
+          header .col .row nav a.active {
+            text-decoration: underline; }
+
+.games-header {
+  background-color: #0072C6; }
+  .games-header .col .row nav p {
+    font-size: 28px;
+    color: #FFF; }
+  .games-header .col .row nav .btn, .games-header .col .row nav p {
+    display: inline-block; }
+
+.hero {
+  background: url("/src/public_site/media/hero.jpg") no-repeat center;
+  background-size: cover;
+  height: 600px;
+  padding: 200px 130px 70px 130px; }
+  .hero h1 {
+    font-size: 48px; }
+  .hero ul li {
+    font-size: 20px;
+    color: #FFF; }
+  .hero .btn {
+    margin-top: 25px; }
+
+.main .two-images {
+  display: flex; }
+  .main .two-images .clickable-image {
+    display: block;
+    position: relative;
+    width: 50%; }
+    .main .two-images .clickable-image:hover img {
+      opacity: 1; }
+    .main .two-images .clickable-image img {
+      width: 100%;
+      opacity: 0.6; }
+    .main .two-images .clickable-image h1 {
+      z-index: 99;
+      white-space: nowrap;
+      width: fit-content;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 1; }
+
+.main .description-image {
+  display: flex;
+  flex: 50%;
+  padding: 100px 100px 50px 100px; }
+  .main .description-image .description, .main .description-image img {
+    width: 50%; }
+  .main .description-image .description {
+    margin: auto 0 auto 20px;
+    height: fit-content; }
+  .main .description-image img {
+    margin-right: 20px; }
+  .main .description-image .btn {
+    margin-top: 40px; }
+
+.main .three-images {
+  display: flex;
+  padding: 100px 100px 50px 100px; }
+  .main .three-images .review {
+    width: 30%;
+    margin: 0 1.5% 0 1.5%; }
+    .main .three-images .review:first-child {
+      margin-left: 0; }
+    .main .three-images .review:last-child {
+      margin-right: 0; }
+    .main .three-images .review p {
+      margin-top: 20px; }
+      .main .three-images .review p:last-child {
+        font-size: 20px;
+        text-align: right; }
+    .main .three-images .review img {
+      width: 100%; }
+
+.main .footer-hero {
+  background: url("/src/public_site/media/footer-hero.jpg") no-repeat center;
+  background-size: cover;
+  padding: 45px 100px 45px 100px;
+  height: 340px;
+  margin-bottom: 50px; }
+  .main .footer-hero h1, .main .footer-hero p {
+    margin-bottom: 100px; }
+  .main .footer-hero p {
+    font-size: 20px; }
+
+footer {
+  background-color: #0072C6;
+  color: #FFF;
+  padding-bottom: 50px; }
+  footer .col {
+    display: flex;
+    padding: 20px 130px 20px 130px; }
+    footer .col .row {
+      width: 50%; }
+      footer .col .row img {
+        height: 68px; }
+      footer .col .row h2 {
+        text-align: right;
+        color: #3BB73C; }
+      footer .col .row .social-links {
+        height: 50px;
+        width: fit-content;
+        margin-left: auto; }
+        footer .col .row .social-links a {
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+          margin: 0 10px 0 10px; }
+
+#mobile-footer .col {
+  display: block;
+  padding: 20px 130px 20px 130px; }
+  #mobile-footer .col .row {
+    margin: auto;
+    text-align: center; }
+    #mobile-footer .col .row h2 {
+      text-align: center; }
+    #mobile-footer .col .row .social-links {
+      margin: auto auto 40px auto; }
+
+.game .intro {
+  padding: 200px 100px 20px 100px;
+  display: flex; }
+  .game .intro h1, .game .intro img {
+    width: 50%; }
+  .game .intro h1 {
+    margin: auto 0 auto 50px; }
+
+.game .games {
+  padding: 0 100px 0 100px; }
+  .game .games .search {
+    display: flex; }
+    .game .games .search input[type=text], .game .games .search select {
+      width: 50%; }
+    .game .games .search input[type=text] {
+      padding: 10px 20px 10px 20px;
+      width: 300px;
+      font-size: 20px; }
+    .game .games .search select {
+      margin-left: auto;
+      height: 50px;
+      padding: 10px 20px 10px 20px;
+      width: 150px; }
+
+.game .games-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0 50px 0; }
+  .game .games-grid .game-card {
+    display: block;
+    background-color: #0072C6;
+    width: 30%;
+    margin: 0 1.5% 20px 1.5%;
+    text-decoration: none;
+    padding-bottom: 20px; }
+    .game .games-grid .game-card p, .game .games-grid .game-card h2 {
+      color: #FFF;
+      margin-left: 20px; }
+    .game .games-grid .game-card img {
+      margin: 10px 2% 0 2%;
+      width: 96%; }
+
+.intra table, .intra tr, .intra td {
+  border: 1px solid black;
+  border-collapse: collapse; }
+
+.intra table tr td {
+  padding: 10px; }
+
+.playable-game {
+  margin: 150px 0 50px 0; }
+  .playable-game p, .playable-game .btn {
+    font-family: bungee; }
+  .playable-game .game-view {
+    position: relative;
+    width: 90%;
+    margin: 0 5% 0 5%;
+    height: 1000px;
+    background: url("/src/public_site/media/games/game_bg.svg") no-repeat center;
+    background-size: cover; }
+    .playable-game .game-view .welcome-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #0072C6;
+      width: 75%;
+      height: 75%;
+      opacity: 0.7; }
+      .playable-game .game-view .welcome-box .welcome-content {
+        height: 50%;
+        width: 60%;
+        margin: 15% auto 0 auto; }
+        .playable-game .game-view .welcome-box .welcome-content p {
+          opacity: 1;
+          font-size: 16px;
+          color: #FFF;
+          text-align: center;
+          margin-bottom: 20px; }
+        .playable-game .game-view .welcome-box .welcome-content .btn {
+          margin: 50px auto 0 auto; }
+    .playable-game .game-view .addition-game .inputs {
+      text-align: center;
+      width: 200px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      .playable-game .game-view .addition-game .inputs input, .playable-game .game-view .addition-game .inputs p {
+        display: inline-block; }
+      .playable-game .game-view .addition-game .inputs .btn {
+        margin: auto; }
+  .playable-game .game-end-content .side-panel {
+    text-align: center; }
+    .playable-game .game-end-content .side-panel h1 {
+      display: inline-block; }
+  .playable-game .game-end-content .results {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    width: 650px;
+    height: 75%;
+    transform: translate(-50%, -50%);
+    background-color: #0072C6;
+    opacity: 0.7;
+    text-align: center; }
+    .playable-game .game-end-content .results table {
+      height: 80%;
+      width: 100%;
+      font-size: 20px;
+      font-family: bungee; }
+      .playable-game .game-end-content .results table tr {
+        width: 50%;
+        height: fit-content; }
+        .playable-game .game-end-content .results table tr td {
+          color: #FFF; }
+    .playable-game .game-end-content .results .btn {
+      display: inline-block;
+      margin: auto; }
+  .playable-game .side-panel {
+    position: absolute;
+    top: 50%;
+    right: -150px;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.505); }
+    .playable-game .side-panel .btn {
+      margin: auto; }
+    .playable-game .side-panel .time p {
+      display: block; }
+    .playable-game .side-panel .icon, .playable-game .side-panel p {
+      display: inline-block; }
+    .playable-game .side-panel p {
+      text-align: center;
+      color: #FFF; }
+  .playable-game #game-login {
+    height: 450px; }
+
+/*
+  This file includes all the styling for common / general HTML elements.
+*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0072C6; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0087FF; }
+
+.btn {
+  display: block;
+  background-color: #3BB73C;
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFF;
+  padding: 5px 20px 5px 20px;
+  border-radius: 200px;
+  text-decoration: none;
+  box-shadow: #000 0 0 10px 0px;
+  width: fit-content;
+  height: fit-content; }
+  .btn:hover {
+    cursor: pointer;
+    background-color: #3bb73ba2; }
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background-color: #0072C6; }
+  .box .content {
+    width: fit-content;
+    height: fit-content;
+    margin: 100px auto 150px auto; }
+    .box .content h1 {
+      color: #FFF; }
+    .box .content input {
+      display: block;
+      margin: 10px auto 10px auto; }
+    .box .content input[type=submit] {
+      margin: 20px auto 20px auto; }
+    .box .content p {
+      text-align: center;
+      margin: 20px auto 20px auto;
+      color: #FFF; }
+    .box .content .btn {
+      margin: auto; }
+
+.login-bg {
+  background: url("/src/public_site/media/login-bg.jpg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100%; }
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-family: nunito; }
+
+html, body {
+  height: 100%;
+  background-color: #FFF;
+  color: #4F4F4F;
+  overflow: auto; }
+
+ul {
+  margin: 25px 0 0 25px; }
+
+p {
+  font-size: 16px; }
+
+h1 {
+  font-size: 36px;
+  color: #0072C6; }
+
+h2 {
+  font-size: 24px;
+  color: #0072C6;
+  padding: 50px 0 50px 0; }
+
+h3 {
+  font-size: 18px;
+  color: #0072C6;
+  padding: 25px 0 25px 0; }
+
+/*
+  This file includes all the styling for buttons with icons.
+*/
+a i {
+  display: block;
+  width: 100%;
+  height: 100%; }
+  a i.whatsapp {
+    background: url("/src/public_site/media/icons/whatsapp.png") no-repeat center; }
+  a i.facebook {
+    background: url("/src/public_site/media/icons/facebook.png") no-repeat center; }
+  a i.linkedin {
+    background: url("/src/public_site/media/icons/linkedin.png") no-repeat center; }
+
+@media (max-width: 1000px) {
+  header .col {
+    padding: 20px 15px 20px 15px; }
+  .hero h1 {
+    text-align: center; }
+  .hero .btn {
+    margin-left: auto;
+    margin-right: auto; }
+  .main .three-images {
+    display: block;
+    padding: 20px 20px 50px 20px; }
+    .main .three-images .review {
+      margin: 0 0 50px 0; }
+      .main .three-images .review:first-child {
+        margin: 0 0 50px 0; }
+      .main .three-images .review:last-child {
+        margin: 0 0 50px 0; }
+    .main .three-images .review {
+      width: 100%; }
+  .main .description-image {
+    padding: 100px 10px 50px 10px; }
+  .main #description-image-btn-mobile {
+    display: block;
+    margin: 0 auto 40px auto; }
+  .main .footer-hero h1, .main .footer-hero p {
+    text-align: center; }
+  .main .footer-hero .btn {
+    margin: 0 auto 0 auto; } }
+
+@media (max-width: 500px) {
+  .hero {
+    padding: 200px 15px 120px 15px; }
+  .main .two-images {
+    height: 300px; }
+    .main .two-images img {
+      height: 100%;
+      object-fit: cover; }
+    .main .two-images h1 {
+      font-size: 14px; }
+  .main .description-image .description {
+    margin: 0; }
+  .main .description-image img {
+    height: fit-content; }
+  #mobile-footer .col {
+    padding: 20px 0 20px 0; }
+    #mobile-footer .col .social-links {
+      width: fit-content; }
+  .main .footer-hero {
+    padding: 45px 15px 100px 15px; }
+  .game .intro {
+    padding: 200px 10px 20px 10px; }
+    .game .intro h1 {
+      margin-left: 0; }
+  .game .games {
+    padding: 0 10px 0 10px; }
+    .game .games .search input[type=text] {
+      width: 150px; }
+    .game .games .search select {
+      width: 100px; } }

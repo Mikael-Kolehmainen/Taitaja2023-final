@@ -1,0 +1,21 @@
+/*
+  This file includes all the styling for buttons with icons.
+*/
+
+a {
+  i {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    &.whatsapp {
+      background: url('/src/public_site/media/icons/whatsapp.png') no-repeat center;
+    }
+    &.facebook {
+      background: url('/src/public_site/media/icons/facebook.png') no-repeat center;
+    }
+    &.linkedin {
+      background: url('/src/public_site/media/icons/linkedin.png') no-repeat center;
+    }
+  }
+}

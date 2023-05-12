@@ -1,0 +1,127 @@
+/*
+  This file includes all the styling for common / general HTML elements.
+*/
+
+// SCROLL BAR
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $primary-color;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $secondary-color;
+}
+
+// BUTTON
+
+.btn {
+  display: block;
+  background-color: $button-primary-color;
+  font-size: $b-font-size;
+  font-weight: bold;
+  color: $font-button-color;
+  padding: 5px 20px 5px 20px;
+  border-radius: 200px;
+  text-decoration: none;
+  box-shadow: #000 0 0 10px 0px;
+  width: fit-content;
+  height: fit-content;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $button-primary-hover-color;
+  }
+}
+
+// BOX
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background-color: $primary-color;
+
+  .content {
+    width: fit-content;
+    height: fit-content;
+    margin: 100px auto 150px auto;
+
+    h1 {
+      color: $font-button-color;
+    }
+    input {
+      display: block;
+      margin: 10px auto 10px auto;
+    }
+    input[type=submit] {
+      margin: 20px auto 20px auto;
+    }
+    p {
+      text-align: center;
+      margin: 20px auto 20px auto;
+      color: $font-button-color;
+    }
+    .btn {
+      margin: auto;
+    }
+  }
+}
+
+// LOGIN
+
+.login-bg {
+  background: url("/src/public_site/media/login-bg.jpg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+// BASIC ELEMENTS
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-family: $main-font;
+}
+html, body {
+  height: 100%;
+  background-color: $background-color;
+  color: $font-primary-color;
+  overflow: auto;
+}
+ul {
+  margin: 25px 0 0 25px;
+}
+p {
+  font-size: $p-normal;
+}
+h1 {
+  font-size: $h1;
+  color: $heading-primary-color;
+}
+h2 {
+  font-size: $h2;
+  color: $heading-primary-color;
+  padding: 50px 0 50px 0;
+}
+h3 {
+  font-size: $h3;
+  color: $heading-primary-color;
+  padding: 25px 0 25px 0;
+}

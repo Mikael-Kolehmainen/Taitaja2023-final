@@ -1,0 +1,19 @@
+.hero {
+  background: url('/src/public_site/media/hero.jpg') no-repeat center;
+  background-size: cover;
+  height: 600px;
+  padding: 200px 130px 70px 130px;
+
+  h1 {
+    font-size: $hero-h;
+  }
+  ul {
+    li {
+      font-size: $p-large;
+      color: $font-button-color;
+    }
+  }
+  .btn {
+    margin-top: 25px;
+  }
+}

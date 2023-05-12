@@ -1,0 +1,56 @@
+/*
+  This file includes all the variables for the SCSS files, by saving values
+  to variables we can avoid repetition and make it efficient to make changes
+  to the values.
+*/
+
+// FONT FAMILY
+
+@font-face {
+  font-family: lexend;
+  src: url(/src/public_site/font/Lexend-Regular.ttf);
+}
+$heading-font: lexend;
+@font-face {
+  font-family: nunito;
+  src: url(/src/public_site/font/Nunito-Regular.ttf);
+}
+$main-font: nunito;
+@font-face {
+  font-family: bungee;
+  src: url(/src/public_site/font/Bungee-Regular.ttf),
+}
+$game-font: bungee;
+
+// FONT SIZES
+
+$hero-h: 48px;
+$h1: 36px;
+$h2: 24px;
+$h3: 18px;
+$p-small: 12px;
+$p-normal: 16px;
+$p-large: 20px;
+$b-font-size: 14px;
+
+// FONT COLORS
+
+$font-primary-color: #4F4F4F;
+$font-button-color: #FFF;
+$heading-primary-color: #0072C6;
+
+// MAIN COLORS
+
+$primary-color: #0072C6;
+$secondary-color: #0087FF;
+$primary-contrast-color: #3BB73C;
+$secondary-contrast-color: #FF9600;
+$background-color: #FFF;
+$neutral-color-one: #4F4F4F;
+
+// BUTTON COLORS
+
+$button-primary-color: #3BB73C;
+$button-primary-hover-color: #3bb73ba2;
+$button-secondary-color: transparent;
+$button-secondary-hover-color: #0072C6;

@@ -1,0 +1,18 @@
+{
+  "name": "mikael-kolehmainen-taitaja23-final",
+  "author": "Mikael Kolehmainen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.php",
+  "scripts": {
+    "sass": "node-sass -w src/public_site/styles/sass/ -o src/public_site/styles/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Taitaja2023/mikael-kolehmainen-taitaja23-final.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}

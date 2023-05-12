@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .floor {
+        border: 3px solid black;
+        width: 300px;
+        height: 300px;
+        position: relative;
+      }
+      .floor > * {
+        border: 2px solid black;
+        display: inline-block;
+        position: absolute;
+      }
+      .kitchen {
+        width: 135px;
+        height: 200px;
+      }
+      .kitchen::before {
+        content: "Kitchen";
+        position: absolute;
+        top: 30%;
+        left: 25%;
+      }
+      .office {
+        width: 160px;
+        height: 115px;
+        right: 0;
+      }
+      .office::before {
+        content: "Office";
+        position: absolute;
+        top: 30%;
+        left: 25%;
+      }
+      .living_room {
+        width: 160px;
+        height: 180px;
+        bottom: 0;
+        right: 0;
+      }
+      .living_room::before {
+        content: "Living room";
+        position: absolute;
+        top: 30%;
+        left: 25%;
+      }
+      .toilet {
+        width: 135px;
+        height: 95px;
+        bottom: 0;
+      }
+      .toilet::before {
+        content: "Toilet";
+        position: absolute;
+        top: 30%;
+        left: 25%;
+      }
+      .rooms {
+        position: absolute;
+        left: 400px;
+        top: 90px;
+      }
+      .activated {
+        background-color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="floor">
+      <div class="kitchen">
+
+      </div>
+      <div class="office">
+
+      </div>
+      <div class="toilet">
+
+      </div>
+      <div class="living_room">
+
+      </div>
+    </div>
+    <div class="rooms">
+      <p id="kitchen">Kitchen</p>
+      <p id="living">Living room</p>
+      <p id="office">Office</p>
+      <p id="toilet">Toilet</p>
+    </div>
+    <script>
+      const kithcenP = document.getElementById("kitchen");
+      const livingP = document.getElementById("living");
+      const officeP = document.getElementById("office");
+      const toiletP = document.getElementById("toilet");
+
+      const hoverKitchen = () => {
+        const room = document.getElementsByClassName("kitchen")[0];
+
+        room.classList.add("activated");
+      };
+
+      const hoverLiving = () => {
+        const room = document.getElementsByClassName("living_room")[0];
+
+        room.classList.add("activated");
+      };
+
+      const hoverOffice = () => {
+        const room = document.getElementsByClassName("office")[0];
+
+        room.classList.add("activated");
+      };
+
+      const hoverToilet = () => {
+        const room = document.getElementsByClassName("toilet")[0];
+
+        room.classList.add("activated");
+      };
+
+      kithcenP.addEventListener("mouseover", hoverKitchen)
+      livingP.addEventListener("mouseover", hoverLiving);
+      officeP.addEventListener("mouseover", hoverOffice);
+      toiletP.addEventListener("mouseover", hoverToilet);
+
+      kithcenP.addEventListener("mouseleave", noHoverKitchen)
+      livingP.addEventListener("mouseleave", noHoverLiving);
+      officeP.addEventListener("mouseleave", hoverOffice);
+      toiletP.addEventListener("mouseleave", hoverToilet);
+    </script>
+    </body>
+</html>

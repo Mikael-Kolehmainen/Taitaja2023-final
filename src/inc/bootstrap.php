@@ -1,0 +1,11 @@
+<?php
+/*
+  This is the bootstrap which straps together the autoloader and the configurations
+  file.
+*/
+
+const PROJECT_ROOT_PATH = __DIR__ . "/../../";
+
+require_once PROJECT_ROOT_PATH . "/autoloader.php";
+
+require_once PROJECT_ROOT_PATH . "/src/inc/config.php";

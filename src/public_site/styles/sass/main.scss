@@ -1,0 +1,25 @@
+/*
+  This is the main file of SCSS which bootstraps the other SCSS files.
+*/
+
+// ABSTRACT
+
+@import './abstract/variables';
+
+// LAYOUT
+
+@import './layout/header';
+@import './layout/hero';
+@import './layout/home';
+@import './layout/footer';
+@import './layout/games';
+@import './layout/intra';
+@import './layout/game';
+
+// BASE
+
+@import './base/base';
+@import './base/icons';
+@import './base/mediaqueries';
+
+// FUNCTIONALITY

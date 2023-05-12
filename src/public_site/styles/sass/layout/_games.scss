@@ -1,0 +1,58 @@
+.game {
+  .intro {
+    padding: 200px 100px 20px 100px;
+    display: flex;
+
+    h1, img {
+      width: 50%;
+    }
+    h1 {
+      margin: auto 0 auto 50px;
+    }
+  }
+  .games {
+    padding: 0 100px 0 100px;
+
+    .search {
+      display: flex;
+
+      input[type=text], select {
+        width: 50%;
+      }
+      input[type=text] {
+        padding: 10px 20px 10px 20px;
+        width: 300px;
+        font-size: $p-large;
+      }
+      select {
+        margin-left: auto;
+        height: 50px;
+        padding: 10px 20px 10px 20px;
+        width: 150px;
+      }
+    }
+  }
+  .games-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0 50px 0;
+
+    .game-card {
+      display: block;
+      background-color: $primary-color;
+      width: 30%;
+      margin: 0 1.5% 20px 1.5%;
+      text-decoration: none;
+      padding-bottom: 20px;
+
+      p, h2 {
+        color: $font-button-color;
+        margin-left: 20px;
+      }
+      img {
+        margin: 10px 2% 0 2%;
+        width: 96%;
+      }
+    }
+  }
+}
